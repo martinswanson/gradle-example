@@ -12,7 +12,7 @@ This project simplifies the set up of Java projects built with Gradle in Intelli
 
 For users that only have access to a local repository i.e. no external internet connection: 
 
-1. Create file ~/.gradle/init.gradle: 
+1. Create file `~/.gradle/init.gradle`: 
 ```
     def initGradlePath = buildscript.sourceFile.getParent() allprojects {
         apply from: "${initGradlePath}/repos.gradle", to: buildscript
@@ -20,7 +20,7 @@ For users that only have access to a local repository i.e. no external internet 
     }
 ```
 
-2. Create file ~/.gradle/repos.gradle:
+2. Create file `~/.gradle/repos.gradle`:
 ```
     repositories {
         mavenLocal()
