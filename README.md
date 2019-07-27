@@ -1,4 +1,4 @@
-# Simple template for creating Gradle/Java projects with IntelliJ IDEA
+# Simple template for Gradle/Java projects with IntelliJ IDEA
 
 This project simplifies the set up of Java projects built with Gradle in IntelliJ IDEA.
 
@@ -17,7 +17,7 @@ For users that only have access to a local repository i.e. no external internet 
     def initGradlePath = buildscript.sourceFile.getParent() allprojects {
         apply from: "${initGradlePath}/repos.gradle", to: buildscript
         apply from: "${initGradlePath}/repos.gradle"
-    }
+        }
     
     Create file ~/.gradle/repos.gradle:
 
