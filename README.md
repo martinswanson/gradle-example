@@ -4,9 +4,9 @@ This project simplifies the set up of Java projects built with Gradle in Intelli
 
 ## Usage
 
-+Clone the project
-+Rename the local project directory
-+Change the rootProject.name property in `settings.gradle` to match the new directory naming
+Clone the project
+Rename the local project directory
+Change the `rootProject.name` property in `settings.gradle` to match the new directory naming
 
 ## Managing dependencies behind a firewall
 
