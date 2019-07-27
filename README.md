@@ -51,8 +51,11 @@ Gradle executable allowing users to build the project without a local installati
 
 Same as **gradlew** for Windows users.
 
+## gradle/libraries.gradle
 
+Sets global properties for dependencies in the root `build.gradle` file and any sub-module `build.gradle` files. 
 
+Avoids having to edit dependencies and versions in multiple files.
 
 
 
