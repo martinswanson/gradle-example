@@ -15,9 +15,9 @@ For users that only have access to a local repository i.e. no external internet 
     Create file ~/.gradle/init.gradle:
     
     def initGradlePath = buildscript.sourceFile.getParent() allprojects {
-        apply from: "${initGradlePath}/repos.gradle", to: buildscript
-        apply from: "${initGradlePath}/repos.gradle"
-        }
+    apply from: "${initGradlePath}/repos.gradle", to: buildscript
+    apply from: "${initGradlePath}/repos.gradle"
+    }
     
     Create file ~/.gradle/repos.gradle:
 
