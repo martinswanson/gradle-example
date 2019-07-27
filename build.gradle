@@ -25,7 +25,7 @@ repositories {
 
 // default includes testing and logging
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile libs.junit
     compile libs.slf4j
     compile libs.logback
 }
