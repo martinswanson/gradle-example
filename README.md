@@ -4,15 +4,15 @@ This project simplifies the set up of Java projects built with Gradle in Intelli
 
 ## Usage
 
-⋅⋅⋅Clone the project
-⋅⋅⋅Rename the local project directory
-⋅⋅⋅Change the rootProject.name property in `settings.gradle` to match the new directory naming
+1. Clone the project
+2. Rename the local project directory
+3. Change the rootProject.name property in `settings.gradle` to match the new directory naming
 
 ## Managing dependencies behind a firewall
 
 For users that only have access to a local repository i.e. no external internet connection: 
 
-⋅⋅⋅Create file ~/.gradle/init.gradle: 
+1. Create file ~/.gradle/init.gradle: 
 ```
     def initGradlePath = buildscript.sourceFile.getParent() allprojects {
         apply from: "${initGradlePath}/repos.gradle", to: buildscript
@@ -20,7 +20,7 @@ For users that only have access to a local repository i.e. no external internet 
     }
 ```
 
-⋅⋅⋅Create file ~/.gradle/repos.gradle:
+2. Create file ~/.gradle/repos.gradle:
 ```
     repositories {
         mavenLocal()
@@ -28,7 +28,7 @@ For users that only have access to a local repository i.e. no external internet 
         // other repositories e.g. internal company repos 
     }
 ```
-⋅⋅⋅Comment out the following in the `build.gradle` file
+3. Comment out the following in the `build.gradle` file
 ```    
     repositories {
         mavenCentral()
