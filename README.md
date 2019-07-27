@@ -6,7 +6,7 @@ This project simplifies the set up of Java projects built with Gradle in Intelli
 
     Clone the project
     Rename the local project directory
-    Change the rootProject.name property in settings.gradle to match the new directory naming
+    Change the rootProject.name property in `settings.gradle` to match the new directory naming
 
 ## Managing dependencies behind a firewall
 
@@ -28,22 +28,22 @@ Create file ~/.gradle/repos.gradle:
         // other repositories e.g. internal company repos 
     }
 ```
-Comment out the following in the build.gradle file
+Comment out the following in the `build.gradle` file
 ```    
     repositories {
         mavenCentral()
     }
 ```
 
-This allows you to seperate *what* the project dependencies are from *where* the dependenceis are found.  
+This allows you to seperate *what* the project dependencies are from *where* the dependencies are found.  
 
 ## .gitignore
 
-Filters out the files / directories contained in the local project that should not be stored in GitHub
+Filters out the files / directories contained in the local project that should not be stored in GitHub.
 
 ## gradlew
 
-Gradle executable allowing users to build the project without a local installation of Gradle. Uses the settings.gradle file for configuration parameters.
+Gradle executable allowing users to build the project without a local installation of Gradle. Uses the `settings.gradle` file for configuration parameters.
 
 ## gradlew.bat
 
