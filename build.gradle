@@ -1,0 +1,38 @@
+/* root project gradle build file */
+
+// gradle plugins create JavaExec tasks automatically
+plugins {
+    id 'java'
+    id 'application'
+}
+
+// include global settings from libraries.gradle
+apply from: "$rootDir/gradle/libraries.gradle"
+
+// placeholder for Java main() class
+application {
+    mainClassName = 'io.example.Main'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+// default repo - delete if user has set ~/.gradle/init.gradle and ~/.gradle/repo.gradle files
+repositories {
+    mavenCentral()
+}
+
+// default includes testing and logging
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile libs.slf4j
+    compile libs.logback
+}
+
+// for users without local version or gradle (or who wish to run project with different version of gradle)
+// creates gradle wrapper under /gradle project dir
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+    gradleVersion = 5.5
+}

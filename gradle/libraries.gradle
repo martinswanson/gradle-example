@@ -1,0 +1,15 @@
+ext {
+
+    versions = [
+            junit: "4.12",
+            slf4j: "1.7.26",
+            logback: "1.2.3",
+    ]
+
+    libs = [
+            junit: "junit:junit:${versions.junit}",
+            slf4j: "org.slf4j:slf4j-api:${versions.slf4j}",
+            logback: "ch.qos.logback:logback-classic:${versions.logback}",
+    ]
+
+}
