@@ -8,6 +8,12 @@ public class Main {
     private static Logger LOG = LoggerFactory.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-        LOG.debug("Hello World!");
+
+        LOG.trace("Trace message.");
+        LOG.debug("Debug message.");
+        LOG.info("Info message.");
+        LOG.warn("Warning message.");
+        LOG.error("Error message.");
+
     }
 }
