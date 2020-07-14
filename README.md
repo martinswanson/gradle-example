@@ -1,4 +1,4 @@
-# Simple template for Gradle/Java projects with IntelliJ IDEA
+# Simple IntelliJ IDEA template for Java projects built with Gradle
 
 This project simplifies the set up of Java projects built with Gradle in IntelliJ IDEA.
 
