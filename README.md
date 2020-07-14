@@ -47,6 +47,11 @@ Filters out the files / directories contained in the local project that should n
 
 Gradle executable allowing users to build the project without a local installation of Gradle. Uses the `settings.gradle` file for configuration parameters.
 
+To execute:
+```
+    ./gradlew <command>
+```
+
 ## gradlew.bat
 
 Same as **gradlew** for Windows users.
