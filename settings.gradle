@@ -1,5 +1,5 @@
 /* settings file used by gradlew */
 
 // project and build artifact name
-rootProject.name = 'gradle-template'
+rootProject.name = 'gradle-example'
 

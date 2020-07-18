@@ -4,7 +4,11 @@
 plugins {
     id 'java'
     id 'application'
+    id 'groovy'
+    id "com.adarshr.test-logger" version "2.1.0"
 }
+
+
 
 // include global settings from libraries.gradle
 apply from: "$rootDir/gradle/libraries.gradle"
@@ -25,9 +29,8 @@ repositories {
 
 // default includes testing and logging
 dependencies {
-    testCompile libs.junit
-    compile libs.slf4j
-    compile libs.logback
+    compile libs.groovy, libs.slf4j, libs.logback
+    testCompile libs.junit, libs.spock
 }
 
 // for users without local version or gradle (or who wish to run project with different version of gradle)
@@ -35,4 +38,23 @@ dependencies {
 wrapper {
     distributionType = Wrapper.DistributionType.ALL
     gradleVersion = 5.5
+}
+
+// standard configuration of gradle-test-logger-plugin
+testlogger {
+    theme 'mocha' // pick a theme - mocha, standard, plain, mocha-parallel, standard-parallel or plain-parallel
+    showExceptions true // set to false to disable detailed failure logs
+    showStackTraces true // set to false to hide stack traces
+    showFullStackTraces false // set to true to remove any filtering applied to stack traces
+    showCauses true // set to false to hide exception causes
+    slowThreshold 1000 // set threshold in milliseconds to highlight slow tests
+    showSummary true // displays a breakdown of passes, failures and skips along with total duration
+    showSimpleNames false // set to true to see simple class names
+    showPassed true // set to false to hide passed tests
+    showSkipped true // set to false to hide skipped tests
+    showFailed true // set to false to hide failed tests
+    showStandardStreams false // enable to see standard out and error streams inline with the test results
+    showPassedStandardStreams true // set to false to hide passed standard out and error streams
+    showSkippedStandardStreams true // set to false to hide skipped standard out and error streams
+    showFailedStandardStreams true // set to false to hide failed standard out and error streams
 }
