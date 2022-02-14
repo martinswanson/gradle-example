@@ -8,8 +8,6 @@ plugins {
     id "com.adarshr.test-logger" version "2.1.0"
 }
 
-
-
 // include global settings from libraries.gradle
 apply from: "$rootDir/gradle/libraries.gradle"
 
@@ -29,8 +27,8 @@ repositories {
 
 // default includes testing and logging
 dependencies {
-    compile libs.groovy, libs.slf4j, libs.logback
-    testCompile libs.junit, libs.spock
+    implementation libs.groovy, libs.slf4j, libs.logback
+    testImplementation libs.junit, libs.spock
 }
 
 // for users without local version or gradle (or who wish to run project with different version of gradle)
